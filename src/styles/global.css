@@ -1,0 +1,165 @@
+:root {
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #fafaf8;
+  --color-border: #e5e5e0;
+  --color-accent: #e07850;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Georgia', 'Times New Roman', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout */
+.site-container {
+  display: flex;
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  gap: 4rem;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.sidebar-header h1 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-nav a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.15s ease;
+}
+
+.sidebar-nav a:hover {
+  color: var(--color-text);
+}
+
+.sidebar-nav a.active {
+  color: var(--color-text);
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  max-width: 520px;
+}
+
+.profile-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+.main-content p {
+  margin-bottom: 1rem;
+}
+
+.main-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Links */
+a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color 0.15s ease;
+}
+
+a:hover {
+  text-decoration-color: var(--color-text);
+}
+
+/* Contact section */
+.contact {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.contact h2 {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.contact p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.contact a {
+  color: var(--color-text);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .site-container {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar-header h1 {
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .main-content {
+    max-width: 100%;
+  }
+
+  .profile-photo {
+    width: 90px;
+    height: 90px;
+  }
+}
