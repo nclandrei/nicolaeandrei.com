@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title='CV – Andrei-Mihai Nicolae'
+  description='Professional experience and education of Andrei-Mihai Nicolae'
+>
+  <div class='site-container'>
+    <aside class='sidebar'>
+      <div class='sidebar-header'>
+        <h1>Andrei-Mihai Nicolae</h1>
+      </div>
+      <nav class='sidebar-nav'>
+        <a href='/'>About</a>
+        <a href='/cv' class='active'>CV</a>
+        <a
+          href='https://substack.com/@nclandrei'
+          target='_blank'
+          rel='noopener noreferrer'>Newsletter</a
+        >
+      </nav>
+    </aside>
+
+    <main class='main-content cv-content'>
+      <section class='cv-section'>
+        <h2>Now</h2>
+        <p>
+          Staff engineer at <strong>Carta</strong>, working on equity management
+          software. Been here over three years, first as a senior engineer, now
+          leading technical work. Remote from Bucharest.
+        </p>
+      </section>
+
+      <section class='cv-section'>
+        <h2>Before Carta</h2>
+        <p>
+          <strong>Capdesk</strong>—similar domain, helping European startups
+          manage their cap tables. Before that, <strong
+            >New Verve Consulting</strong
+          > in Glasgow for three years, and <strong>Perigee</strong> in Malmö for
+          two.
+        </p>
+      </section>
+
+      <section class='cv-section'>
+        <h2>Early days</h2>
+        <p>
+          Internships at <strong>King</strong> in Barcelona, <strong
+            >Morgan Stanley</strong
+          > in Glasgow,
+          <strong>DFKI</strong> in Bremen, and a summer with <strong
+            >Google Summer of Code</strong
+          >.
+        </p>
+      </section>
+
+      <section class='cv-section'>
+        <h2>Education</h2>
+        <p>
+          MSci in Software Engineering from the <strong
+            >University of Glasgow</strong
+          >, first class honours. Did my first year at <strong
+            >Jacobs University Bremen</strong
+          > before transferring.
+        </p>
+      </section>
+    </main>
+  </div>
+</BaseLayout>
